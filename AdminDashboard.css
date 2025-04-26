@@ -1,0 +1,276 @@
+/* Admin Dashboard Consistent with INKVERSE Theme */
+:root {
+  --pink-dark: #ff2d75;
+  --pink-light: #ff6b9e;
+  --pink-glow: rgba(255, 45, 117, 0.7);
+  --ink-black: #12000e;
+  --ink-purple: #2a0a3d;
+  --text-glow: 0 0 10px var(--pink-glow);
+  --blue-light: #3498db;
+  --gray-light: #ecf0f1;
+  --gray-dark: #34495e;
+  --white: #ffffff;
+  --hover-dark: #c0392b;
+}
+
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(to right, var(--ink-purple), var(--ink-black));
+  color: var(--white);
+  min-height: 100vh;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-y: auto;   /* Ensure vertical scrolling is enabled */
+}
+
+/* Admin Dashboard Container */
+.admin-dashboard {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.7); /* Dark background with slight transparency */
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Admin Header */
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.admin-header h1 {
+  font-size: 28px;
+  color: var(--pink-light); /* Matching Pink Color */
+  text-shadow: var(--text-glow);
+}
+
+/* Logout Button */
+.logout-btn {
+  padding: 10px 22px;
+  background-color: var(--pink-dark);
+  color: var(--white);
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.logout-btn:hover {
+  background-color: var(--hover-dark);
+}
+
+/* Tabs */
+.tabs {
+  margin: 30px 0 20px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.tabs button {
+  padding: 12px 24px;
+  background-color: var(--gray-light);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.tabs .active-tab {
+  background-color: var(--blue-light);
+  color: var(--white);
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.2);
+}
+
+.tabs button:hover {
+  background-color: var(--gray-dark);
+}
+
+/* Cards */
+.card, .stats-card, .chart-card {
+  background-color: rgba(0, 0, 0, 0.8); /* Darker background for cards */
+  padding: 30px;
+  border-radius: 16px;
+  border: 1px solid var(--pink-dark);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+  border-left: 6px solid var(--blue-light);
+}
+
+.card h2, .stats-card h2, .chart-card h2 {
+  margin-bottom: 25px;
+  color: var(--pink-light); /* Pink Text */
+  font-size: 22px;
+}
+
+/* Card Grid */
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 20px;
+  column-gap: 40px;
+}
+
+.card-grid p {
+  font-size: 16px;
+  color: var(--white);
+  margin: 0;
+}
+
+.card-grid p strong {
+  color: var(--pink-light);
+}
+
+/* Table Styles */
+.books-table, .admins-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #222;
+}
+
+.books-table th, .admins-table th, .books-table td, .admins-table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #444;
+  color: var(--white);
+}
+
+.books-table th, .admins-table th {
+  background-color: var(--ink-purple);
+  font-weight: bold;
+}
+
+.books-table tr:nth-child(even), .admins-table tr:nth-child(even) {
+  background-color: #333;
+}
+
+.books-table tr:hover, .admins-table tr:hover {
+  background-color: var(--pink-light);
+}
+
+.admins-table td button {
+  background-color: var(--pink-dark);
+  color: var(--white);
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.admins-table td button:hover {
+  background-color: var(--hover-dark);
+}
+
+/* Form Styles */
+.admin-form {
+  background-color: rgba(0, 0, 0, 0.7); /* Dark form background */
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  border: 1px solid var(--pink-dark);
+  margin-top: 30px;
+  max-width: 700px;
+}
+
+.admin-form h2 {
+  margin-bottom: 25px;
+  font-size: 22px;
+  color: var(--pink-light); /* Matching Pink Header */
+  text-align: center;
+}
+
+.admin-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.admin-form input,
+.admin-form select,
+.admin-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--pink-dark);
+  border-radius: 8px;
+  font-size: 15px;
+  margin-bottom: 20px;
+  background-color: #333;
+  color: var(--white);
+  transition: border-color 0.3s ease;
+}
+
+.admin-form input:focus,
+.admin-form select:focus,
+.admin-form textarea:focus {
+  border-color: var(--pink-light);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 45, 117, 0.2);
+}
+
+.admin-form .submit-btn,
+.admin-form .cancel-btn {
+  padding: 10px 22px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.admin-form .submit-btn {
+  background-color: var(--pink-dark);
+  color: var(--white);
+}
+
+.admin-form .submit-btn:hover {
+  background-color: var(--hover-dark);
+}
+
+.admin-form .cancel-btn {
+  background-color: var(--gray-light);
+  color: var(--white);
+}
+
+.admin-form .cancel-btn:hover {
+  background-color: var(--gray-dark);
+}
+
+.delete-btn {
+  padding: 8px 14px;
+  background-color: var(--pink-dark);
+  color: var(--white);
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.delete-btn:hover {
+  background-color: var(--hover-dark);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .tabs {
+    flex-direction: column;
+  }
+
+  .admins-table {
+    font-size: 14px;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}

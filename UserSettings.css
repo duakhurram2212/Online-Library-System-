@@ -1,0 +1,272 @@
+/* UserSettings.css */
+:root {
+    --primary: #9c27b0;       /* Purple */
+    --primary-light: #ba68c8; /* Light Purple */
+    --secondary: #121212;     /* Dark Black */
+    --accent: #e91e63;       /* Pink */
+    --text-light: #ffffff;
+    --text-muted: #b3b3b3;
+    --card-bg: #1e1e1e;
+    --border-radius: 8px;
+    --transition: all 0.3s ease;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background-color: var(--secondary);
+    color: var(--text-light);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .user-settings-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .header-section {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .title {
+    color: var(--accent);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+  }
+  
+  .title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    margin: 0.5rem auto;
+    border-radius: 2px;
+  }
+  
+  .success-message {
+    background-color: rgba(76, 175, 80, 0.2);
+    color: #4caf50;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    margin-top: 1rem;
+    border-left: 4px solid #4caf50;
+  }
+  
+  .error-container {
+    background-color: rgba(233, 30, 99, 0.2);
+    color: var(--accent);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    margin: 2rem auto;
+    max-width: 800px;
+    border-left: 4px solid var(--accent);
+  }
+  
+  .loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .loading-spinner {
+    border: 5px solid rgba(156, 39, 176, 0.3);
+    border-top: 5px solid var(--primary);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .profile-section,
+  .password-section,
+  .subscription-section {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-left: 4px solid var(--primary);
+  }
+  
+  .section-title {
+    color: var(--primary-light);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+  }
+  
+  .profile-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .profile-item {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+  }
+  
+  .label {
+    display: block;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .value {
+    font-size: 1.1rem;
+  }
+  
+  .vip {
+    color: var(--accent);
+    font-weight: bold;
+  }
+  
+  .member {
+    color: var(--primary-light);
+  }
+  
+  .password-display {
+    text-align: center;
+  }
+  
+  .password-form,
+  .subscription-form {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-muted);
+  }
+  
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--border-radius);
+    color: var(--text-light);
+    font-size: 1rem;
+    transition: var(--transition);
+  }
+  
+  .form-group input:focus,
+  .form-group select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(156, 39, 176, 0.3);
+  }
+  
+  .form-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .edit-button,
+  .save-button,
+  .cancel-button,
+  .extend-button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: var(--border-radius);
+    font-weight: bold;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  
+  .edit-button {
+    background-color: var(--accent);
+    color: white;
+  }
+  
+  .edit-button:hover {
+    background-color: #d81b60;
+  }
+  
+  .save-button {
+    background-color: var(--primary);
+    color: white;
+  }
+  
+  .save-button:hover {
+    background-color: #7b1fa2;
+  }
+  
+  .cancel-button {
+    background-color: transparent;
+    color: var(--text-muted);
+    border: 1px solid var(--text-muted);
+  }
+  
+  .cancel-button:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--text-light);
+  }
+  
+  .extend-button {
+    background-color: var(--primary-light);
+    color: white;
+  }
+  
+  .extend-button:hover {
+    background-color: var(--primary);
+  }
+  
+  .subscription-info {
+    margin-bottom: 1.5rem;
+  }
+  
+  .subscription-info p {
+    margin-bottom: 0.5rem;
+  }
+  
+  .action-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  @media (max-width: 768px) {
+    .user-settings-container {
+      padding: 1rem;
+    }
+    
+    .profile-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .action-buttons {
+      flex-direction: column;
+    }
+    
+    .edit-button,
+    .save-button,
+    .cancel-button,
+    .extend-button {
+      width: 100%;
+    }
+  }
+
+  

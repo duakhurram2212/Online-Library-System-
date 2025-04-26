@@ -1,0 +1,169 @@
+.bookmarks-page {
+  padding: 2rem;
+  background-color: #0a0a0a; /* onyx black base */
+  min-height: 100vh;
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.bookmarks-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #32143f;
+  padding-bottom: 1rem;
+}
+
+.header-content h1 {
+  font-size: 2.5rem;
+  color: #f8e6ff;
+  text-shadow: 0 0 10px #c85fff;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #d6b3ff;
+  margin-top: 0.5rem;
+}
+
+.back-button {
+  background-color: transparent;
+  border: 1px solid #a64bf4;
+  color: #dbb2ff;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.back-button:hover {
+  background-color: #2d003f;
+  border-color: #ff70e6;
+  color: #ffffff;
+}
+
+.bookmarks-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.bookmark-card {
+  background: linear-gradient(135deg, #0d0d0d, #1a001f);
+  border-radius: 1rem;
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  box-shadow: 0 0 12px rgba(255, 105, 255, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bookmark-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 18px #b347ff;
+}
+
+.book-cover img {
+  width: 80px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #550066;
+}
+
+.cover-placeholder {
+  width: 80px;
+  height: 110px;
+  background-color: #222;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  border-radius: 6px;
+  border: 1px solid #5a007d;
+}
+
+.bookmark-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.bookmark-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #f1d6ff;
+  text-shadow: 0 0 6px #b84dff;
+}
+
+.bookmark-info p {
+  font-size: 0.9rem;
+  color: #c8a4e8;
+  margin: 0.3rem 0;
+}
+
+.action-button {
+  margin-top: 0.5rem;
+  background-color: #3a004d;
+  color: #fff;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  box-shadow: 0 0 8px #a14fff30;
+}
+
+.action-button:hover {
+  background-color: #5c0087;
+}
+
+.loading-container,
+.error-container,
+.empty-state {
+  text-align: center;
+  margin-top: 4rem;
+  color: #aaa;
+}
+
+.spinner {
+  border: 6px solid #222;
+  border-top: 6px solid #d946ef; /* neon pink spin */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 1rem auto;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.empty-state img {
+  width: 150px;
+  margin-bottom: 1rem;
+  opacity: 0.7;
+  filter: drop-shadow(0 0 10px #ff80f4);
+}
+
+.browse-button {
+  background-color: #1b001e;
+  color: #ddb3ff;
+  padding: 0.6rem 1.2rem;
+  border: 1px solid #bb6eff;
+  border-radius: 8px;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.browse-button:hover {
+  background-color: #31003e;
+  color: #fff;
+  border-color: #ff9dfc;
+}

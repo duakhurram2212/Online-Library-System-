@@ -1,0 +1,313 @@
+/* General Container */
+.manage-books-container {
+  padding: 40px;
+  background: linear-gradient(135deg, #181818, #12000e);
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 12px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  max-width: 1200px;
+  margin: 40px auto;
+  border: 1px solid #1d6f8e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header */
+h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding-bottom: 15px;
+  border-bottom: 3px solid #1d6f8e;
+  text-shadow: 0 0 8px rgba(0, 159, 255, 0.7);
+}
+
+/* Tabs Navigation */
+.tabs {
+  display: flex;
+  justify-content: center;
+  background-color: #292929;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+.tab {
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  color: #cfcfcf;
+  cursor: pointer;
+  border-radius: 8px;
+  background-color: #444;
+  transition: all 0.3s ease;
+  margin: 0 10px;
+}
+
+.tab:hover {
+  background-color: #00aaff;
+  color: #181818;
+}
+
+.tab.active {
+  background-color: #1d6f8e;
+  color: #fff;
+}
+
+/* Tab Content */
+.tabs-content {
+  padding: 20px;
+  background: linear-gradient(135deg, #282c34, #1c1c1c);
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+/* Add Book Section */
+.tabs-content#add-book {
+  background: linear-gradient(135deg, #202a32, #0d1117);
+  padding: 50px 50px; /* Increased padding for more height/space inside */
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  max-width: 1000px; /* Increased width for a wider look */
+}
+
+.tabs-content#add-book h3 {
+  font-size: 2rem;
+  color: #00aaff;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.book-form {
+  display: block; /* Use flexbox for better control */
+  flex-wrap: wrap; /* Allow form elements to wrap on smaller screens */
+  gap: 20px; /* Space between form elements */
+  margin-bottom: 30px;
+  width: 100%; /* Ensure form stays within its container */
+}
+
+.book-form input,
+.book-form select,
+.book-form button {
+  width: 90%; /* Adjust width for form elements to fit side by side */
+}
+
+
+.book-form input,
+.book-form select {
+  padding: 15px;
+  border: 1px solid #1d6f8e;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  background-color: #333;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.book-form input:hover,
+.book-form select:hover {
+  border-color: #00aaff;
+}
+
+.book-form input:focus,
+.book-form select:focus {
+  border-color: #00aaff;
+  outline: none;
+  background-color: #1d6f8e;
+  box-shadow: 0 0 0 3px rgba(0, 159, 255, 0.2);
+}
+
+.book-form button {
+  grid-column: span 2;
+  background-color: #1d6f8e;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.book-form button:hover {
+  background-color: #00aaff;
+}
+
+/* Delete Button */
+.delete-btn {
+  padding: 12px 25px;
+  background-color: #e53935;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.delete-btn:hover {
+  background-color: #c62828;
+}
+
+/* Top 3 Books */
+.top-books {
+  width: 100%;
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #1d1f27, #202a32);
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 159, 255, 0.2);
+  color: white;
+}
+
+.top-books h3 {
+  color: #00aaff;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.top-book-item {
+  background-color: #2a2f3a;
+  padding: 15px 20px;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 170, 255, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.top-book-item:hover {
+  transform: scale(1.02);
+}
+
+/* Reviews Section */
+.reviews {
+  width: 100%;
+  max-width: 1100px;
+  padding: 30px;
+  margin-top: 50px;
+  background: linear-gradient(135deg, #1a1f2b, #2c3645);
+  border-radius: 16px;
+  box-shadow: 0 0 25px rgba(0, 170, 255, 0.25);
+  color: #e0f7fa;
+  transition: transform 0.3s ease;
+}
+
+.reviews:hover {
+  transform: scale(1.01);
+}
+
+/* Heading */
+.reviews h3 {
+  font-size: 2rem;
+  text-align: center;
+  color: #00cfff;
+  margin-bottom: 25px;
+  text-shadow: 0 0 10px rgba(0, 204, 255, 0.3);
+}
+
+/* Review Card */
+.review-item {
+  background-color: #2d323e;
+  padding: 20px 25px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 12px rgba(0, 159, 255, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+/* Optional hover effect */
+.review-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(0, 200, 255, 0.3);
+}
+
+/* Add a left glowing border for a cool effect */
+.review-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10%;
+  height: 80%;
+  width: 5px;
+  background: linear-gradient(180deg, #00aaff, #00ffd0);
+  border-radius: 5px;
+}
+
+
+/* Body Gradient */
+body {
+  background: linear-gradient(135deg, #0d1117, #202a32);
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .manage-books-container {
+    padding: 25px;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .tabs {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .tab {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  .book-form {
+    grid-template-columns: 0.9fr;
+  }
+
+  .book-form button {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .manage-books-container {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  .tab {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .book-form input,
+  .book-form select,
+  .book-form button {
+    padding: 10px;
+  }
+
+  .delete-btn {
+    padding: 8px 15px;
+  }
+}
