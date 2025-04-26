@@ -2,7 +2,6 @@
 Backend - Node.js
 Frontend - React
 Database - SQL Server
-License - MIT
 Contributions Welcome
 Status - Active
 ---
